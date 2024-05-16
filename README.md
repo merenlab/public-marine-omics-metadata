@@ -15,18 +15,19 @@ The purpose of this section is to describe the details of the metadata curation 
 * BATS
 * Western Channel Observatory L4 Station
 
-Project name | Website | (Data) publication | date range | depth range | project accession # | MGnify accession # | PlantetMicrobe link | Note
--- | -- | -- | -- | -- | -- | -- | -- | -- 
-Tara Oceans | https://fondationtaraocean.org/en/home/ |  |  | | PRJEB1787 | MGYS00000410 | | 
-OSD 2014 |  | | |  | PRJEB8682 | MGYS00000462  
-Bio-GO-SHIP | | | |  | PRJNA656268 | MGYS00006028
-bioGEOTRACES | website | https://doi.org/10.1038/sdata.2018.176 |  |   | PRJNA385854 | MGYS00005294 | | 
-Malaspina | | https://doi.org/10.1038/s41597-024-02974-1 |  |  | PRJEB52452 | MGYS00006577
-BATS 2003-2004 | | https://doi.org/10.1038/sdata.2018.176 | 2003 - 2004 |   |  PRJNA385855 |  | [BATS Chisholm](https://www.planetmicrobe.org/#/projects/6) | same as HOT 2003 - 2004)
-HOT144-166 |  | https://doi.org/10.1038/sdata.2018.176 | 2003 - 2004 |   |  PRJNA385855 |  | [BATS Chisholm](https://www.planetmicrobe.org/#/projects/6) | same as BATS 2003 - 2004)
-HOT 194-215 |  |  |  | 10 m to 4000 m | PRJNA16339 |  | [HOT 194-215](https://www.planetmicrobe.org/#/projects/11)
-HOT 224-283 |  | https://www.ncbi.nlm.nih.gov/pubmed/28808230 |  | surface to 1000 m | PRJNA352737 |  | [HOT 224-283](https://www.planetmicrobe.org/#/projects/9) 
-WCO |  | https://doi.org/10.4056/sigs.1202536 | | | PRJEB2064 | | 
+Quick overview of dataset currently covered: 
+Project name  |  date range | depth range | project accession # | (Data) publication | Other sources | Note
+-- | -- | -- | -- | -- | -- | --  
+[Tara Oceans](https://fondationtaraocean.org/en/home/) | 2009 - 2012 | 0-95 | PRJEB1787 |   | MGnify: MGYS00000410 | | 
+OSD 2014 | 2014 |  | PRJEB8682 |  | MGnify: MGYS00000462  
+Bio-GO-SHIP |  | 3-7 | PRJNA656268 | https://www.nature.com/articles/s41597-021-00889-9 | MGYS00006028
+bioGEOTRACES | 2010, 2011 | | PRJNA385854 | https://doi.org/10.1038/sdata.2018.176 | MGnify: MGYS00005294, BODC: https://www.bodc.ac.uk/geotraces/ | | 
+Malaspina |  |  | PRJEB52452 | https://doi.org/10.1038/s41597-024-02974-1 | MGnify: MGYS00006577
+BATS 2003-2004 | 2003 - 2004 |   |  PRJNA385855 | https://doi.org/10.1038/sdata.2018.176 | PlanetMicrobe: [BATS Chisholm](https://www.planetmicrobe.org/#/projects/6) | same as HOT 2003 - 2004)
+HOT144-166  | 2003 - 2004 |   |  PRJNA385855 | https://doi.org/10.1038/sdata.2018.176 | PlanetMicrobe: [BATS Chisholm](https://www.planetmicrobe.org/#/projects/6) | same as BATS 2003 - 2004)
+HOT 194-215  |  | 10 m to 4000 m | PRJNA16339 |  | PlanetMicrobe: [HOT 194-215](https://www.planetmicrobe.org/#/projects/11)
+HOT 224-283  |  | surface to 1000 m | PRJNA352737 |  https://www.ncbi.nlm.nih.gov/pubmed/28808230 | PlanetMicrobe: [HOT 224-283](https://www.planetmicrobe.org/#/projects/9) 
+WCO | 2008 | 2, 4, 17 | PRJEB2064 | https://doi.org/10.4056/sigs.1202536 |  | 
 
 # Metatranscriptomes
 
