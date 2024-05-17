@@ -1,6 +1,8 @@
 # Purpose
 
-Blah
+Welcome to the Standardized Metadata Collection for Omics Data repository! This repository is dedicated to the collection, standardization, and sharing of metadata associated with various omics data types, currently focusing on metagenomics but with plans to expand to metatranscriptomics, metaproteomics, and metabolomics. 
+
+Our goal is to present metadata in a standardized fashion, both semantically and syntactically, ensuring it is ready for analysis. We will provide guidance and examples to help others contribute. By pooling our efforts, we aim to avoid the duplication of work involved in preparing individual metadata sets and make the process more efficient, considering the significant amount of effort required for metadata preparation.
 
 
 # Metagenomomes
