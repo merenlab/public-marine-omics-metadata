@@ -38,5 +38,28 @@ To run this script do:
 python3 cleanKingfisherTARA.py
 ```
 
+---
+
+**The following scripts will be done in R**
+
+---
+
+### 3. `importENAmetadata.R`
+
+Here, we are importing the metadata tables into R, making sure that the headers are consistenly formatted and check the number of samples and runs in each project.
+
+### 4. `sepBATSandHOT.R`
+
+Here, we are separating the BATS and HOT1 project (both included in the same project accession number on ENA `PRJNA385855`). We are also again checking the number of samples and runs in each project after the split.
+
+### 5. `metagenomicsNpairedOnly.R`
+
+Here, we are filtering our runs to only keep metagenomics data (no amplicon or similar), as well as only keeping paired end sequencing runs (so no 454). This completely excludes the data from the WCO and HOT2, as well as a few runs from TARA. The associated runs/samples will no longer be considered in this metadata standardisatino moving forward.
+
+### 6. `checkNpatchNfilterDepth.R`
+
+Here, we are filtering all samples based on depth because I am only working with samples of depth ≤100 m.
+
+It is notable that one of the TARA samples notes a range in the depth column: `Range found in 'run': ERR599001 with depth: 5-160`. For now, I have taken the average, but may remove this run later because I cannot trust the depth value
 
 
