@@ -153,6 +153,8 @@ No information on coastal VS open ocean
 No information on upwelling system or non-upwelling system
 
 > [!NOTE]
+Information to continue with: bottle_id_pub	biosample	run	bioproject	gbp	library_strategy	library_selection	model	sample_name	taxon_name	experiment_accession	experiment_title	library_name	library_source	library_layout	platform	study_accession	study_alias	sample_alias	sample_accession	collection_date	depth	env_biome	env_feature	env_material	geo_loc_name	geotraces_section	cruise_id	cruise_station	bottle_id	biosamplemodel	study_title	design_description	study_abstract   number_of_runs_for_sample	spots	bases	run_size	published	read1_length_average	read1_length_stdev	read2_length_average	read2_length_stdev
+
 "Special" information to continue with: year	month	day	time temperature_degC	salinity_pss   oxygen_umolKg	phosphate_umolKg  silicate_umolKg	nitrate_umolKg  nitrite_umolKg dic_umolKg	doc_umolKg chla_ngL	chlb_ngL	chlc_ngL size_fraction_lower_threshold	size_fraction_upper_threshold	size_frac	samp_size	samp_vol_we_dna_ext	latitude	longitude	lat_lon
 `
 
