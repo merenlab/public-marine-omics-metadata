@@ -152,6 +152,10 @@ Information in `geo_loc_name` relatively vague ("Pacific Ocean" or "Atlantic Oce
 No information on coastal VS open ocean
 No information on upwelling system or non-upwelling system
 
+> [!NOTE]
+"Special" information to continue with: year	month	day	time temperature_degC	salinity_pss   oxygen_umolKg	phosphate_umolKg  silicate_umolKg	nitrate_umolKg  nitrite_umolKg dic_umolKg	doc_umolKg chla_ngL	chlb_ngL	chlc_ngL size_fraction_lower_threshold	size_fraction_upper_threshold	size_frac	samp_size	samp_vol_we_dna_ext	latitude	longitude	lat_lon
+`
+
 
 
 
