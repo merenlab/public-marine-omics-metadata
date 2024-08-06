@@ -71,5 +71,43 @@ The names follow the structure [project_acronym]_metadata_save.
 
 This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
 
+---
+
+From here on, we are focusing on patching the metadata of the individual projects 
+
+---
+
+### bioGEOTRACES
+
+#### Download metadata from publication: `download_SciDataTable_BGT.py`
+
+Here, we are downloading table 3 from the data publication introducing the bioGEOTRACES, BATS, and HOT1 datasets. The table contains a column on `Bottle ID` which will allow us to link our data to additional metadata.
+
+Data Publication: Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+
+To run it, do:
+```
+python3 download_SciDataTable_BGT.py
+```
+
+#### link ENA metadata to metadata on BODC `patchNstandardiseBGT.R`
+
+Here, we
+- import the table 3 we downloaded in the step above into R
+- subset that table to only keep the values pertaining to BGT
+- add the information on the `Bottle ID` (is also included in the ENA dataset but has some weird values sometimes) and `Collection Date` (this includes time, which the `collection_date` from ENA does not) to our dataframe with the suffix `_pub`
+
+
+
+- import metadata from BODC (getting the file from the BODC is described here: https://github.com/merenlab/public-marine-omics-metadata/issues/1)
+- remove any columns with NAs only
+- remove the `QV:SEADATANET` columns that are associated with many of the environmental data columns
+- clean the column names
+- merge the dataframes based on the `bottle_id_pub` with the suffix `_bodc` for all new metadata keys 
+
+
+
+
+
 
 
