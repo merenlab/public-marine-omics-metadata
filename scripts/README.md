@@ -207,4 +207,6 @@ For some bottles, there is no information
 [31] "2004-03-19" "2009-08-19" "2009-11-04"
 ```
 
+I noticed that for some of the samples, where we got information from HOTDOG, the date_dog and the collection_date_pub do not match and the date in `date_dog` is significantly later. So perhaps, I have to increase the date range to capture those. Example: `collection_date_pub` = 2004-11-10 WHILE date_dog `112704`. Retry with that.
+
 
