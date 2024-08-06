@@ -120,7 +120,7 @@ To run it, do:
 python3 download_SciDataTable_BGT.py
 ```
 
-#### link ENA metadata to metadata on BODC `patchNstandardiseBGT.R`
+#### link ENA metadata to metadata on BODC and to metadata mentioned in the data publication `patchNstandardiseBGT.R` 
 
 Here, we
 - import the table 3 we downloaded in the step above into R
@@ -159,8 +159,52 @@ Information to continue with: bottle_id_pub	biosample	run	bioproject	gbp	library
 "Special" information to continue with: year	month	day	time temperature_degC	salinity_pss   oxygen_umolKg	phosphate_umolKg  silicate_umolKg	nitrate_umolKg  nitrite_umolKg dic_umolKg	doc_umolKg chla_ngL	chlb_ngL	chlc_ngL size_fraction_lower_threshold	size_fraction_upper_threshold	size_frac	samp_size	samp_vol_we_dna_ext	latitude	longitude	lat_lon
 `
 
+### HOT1
+
+#### Download metadata from publication: `download_SciDataTable_BGT.py`
+
+Here, we are reusing the same table 3 from the data publication introducing the bioGEOTRACES, BATS, and HOT1 datasets. The table contains a column on `Bottle ID` which will allow us to link our data to additional metadata.
+
+Data Publication: Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+
+To run it, do:
+```
+python3 download_SciDataTable_BGT.py
+```
+
+#### link ENA metadata to metadata on HOTDOG and to metadata mentioned in the data publication `patchNstandardiseHOT1.R`
+
+Here, we
+- import the table 3 we downloaded in the step above into R
+- subset that table to only keep the values pertaining to BGT
+- add the information on the `Bottle ID` (is also included in the ENA dataset but has some weird values sometimes) and `Collection Date` (this includes time, which the `collection_date` from ENA does not) to our dataframe with the suffix `_pub`
+
+[This is your captain speaking. To proceed:] get additional HOT metadata from the HOTDOG portal as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/2
+
+- import metadata from HOTDOG 2003-2004 and 2009
+- combine the two dataframes
+- clean the column names
+- merge the dataframes based on the `bottle_id_pub` with the suffix `_dog` for all new metadata keys
+
+> [!NOTE]
+For some bottles, there is no information
 
 
-
+```
+> HOT1_pubNdog030409_merged$date_dog
+ [1] " 022404" " 022404" " 042004" " 051804" " 061504" " 081504" " 081504" " 092804" " 103104" " 112704" NA        NA        NA        " 011703"
+[15] " 022503" " 032803" " 042303" " 052003" " 061903" " 061903" " 071903" " 082003" " 110903" NA        " 122003" " 122003" " 101403" NA       
+[29] " 012104" " 012104" " 031904" NA        NA       
+> HOT1_pubNdog030409_merged$bottle_id_pub
+ [1] "1560200314" "1560200308" "1580200313" "1590200314" "1600200414" "1620200414" "1620200408" "1630200414" "1640201117" "1650200419"
+[11] "1650200409" "1660200514" "1660200508" "1440200914" "1450200318" "1460200314" "1470200314" "1480200316" "1490200314" "1490200308"
+[21] "1500200314" "1510200316" "1530200314" "1530200308" "1540201018" "1540201010" "1520200320" "1520200308" "1550200314" "1550200308"
+[31] "1570200323" "2140200308" "2160200304"
+> HOT1_pubNdog030409_merged$collection_date
+ [1] "2004-02-24" "2004-02-24" "2004-04-20" "2004-05-18" "2004-06-15" "2004-08-15" "2004-08-15" "2004-09-28" "2004-10-10" "2004-11-10"
+[11] "2004-11-10" "2004-12-14" "2004-12-14" "2003-01-17" "2003-02-25" "2003-03-28" "2003-04-23" "2003-05-20" "2003-06-19" "2003-06-19"
+[21] "2003-07-19" "2003-08-20" "2003-11-09" "2003-11-09" "2003-12-20" "2003-12-20" "2003-10-14" "2003-10-14" "2004-01-21" "2004-01-21"
+[31] "2004-03-19" "2009-08-19" "2009-11-04"
+```
 
 
