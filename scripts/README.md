@@ -103,7 +103,7 @@ procedual metadata
 Information I know won't be there, but I would like
 - coastal VS open ocean
 - upwelling system or non-upwelling system
-- consistent marine regions (e.g. which are all from the north atlantic? - can also be calculated later) - given as geo_loc_name`
+- consistent marine regions (e.g. which are all from the north atlantic? - can also be calculated later) - given as `geo_loc_name`
 - layer (did they target a deep chlorophyll maximum?)
 
 
@@ -146,7 +146,11 @@ Now we will add some more information from the text of the publication https://d
 - separate collection_date in to year, month, day, time
 - streamline column names for environmental metadata (including units in the name for now)
 
-
+> [!NOTE]
+No information on layers to be found
+Information in `geo_loc_name` relatively vague ("Pacific Ocean" or "Atlantic Ocean")
+No information on coastal VS open ocean
+No information on upwelling system or non-upwelling system
 
 
 
