@@ -77,6 +77,36 @@ From here on, we are focusing on patching the metadata of the individual project
 
 ---
 
+Information we are aiming for:
+
+Essential
+- latitude and longitude (needed to see latitudinal gradient) - given either in lat_lon, latitude + longitude,
+   - need this as decimal, in separate fiels but also together
+- collection_date and time (what time of the year was it, can use to determine seasons)
+- size fractionation (essential to know what organisms to expect)
+
+Env metadata
+- temperature
+- salinity
+- as much as we can get really!
+
+environment 
+- env_biome
+- env_feature
+- env_material
+
+procedual metadata
+- sequencing technique
+- sequencing platform `platform`
+- sequencing model `model`
+
+Information I know won't be there, but I would like
+- coastal VS open ocean
+- upwelling system or non-upwelling system
+- consistent marine regions (e.g. which are all from the north atlantic? - can also be calculated later) - given as geo_loc_name`
+- layer (did they target a deep chlorophyll maximum?)
+
+
 ### bioGEOTRACES
 
 #### Download metadata from publication: `download_SciDataTable_BGT.py`
@@ -97,13 +127,25 @@ Here, we
 - subset that table to only keep the values pertaining to BGT
 - add the information on the `Bottle ID` (is also included in the ENA dataset but has some weird values sometimes) and `Collection Date` (this includes time, which the `collection_date` from ENA does not) to our dataframe with the suffix `_pub`
 
+[This is your captain speaking. To proceed:] get additional BGT metadata from the BODC as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/1
 
-
-- import metadata from BODC (getting the file from the BODC is described here: https://github.com/merenlab/public-marine-omics-metadata/issues/1)
+- import metadata from BODC
 - remove any columns with NAs only
 - remove the `QV:SEADATANET` columns that are associated with many of the environmental data columns
 - clean the column names
-- merge the dataframes based on the `bottle_id_pub` with the suffix `_bodc` for all new metadata keys 
+- merge the dataframes based on the `bottle_id_pub` with the suffix `_bodc` for all new metadata keys
+
+Now we will add some more information from the text of the publication https://doi.org/10.1038/sdata.2018.176
+
+- add size fractionation information, `size_fraction_lower_threshold`, `size_fraction_upper_threshold` and `size_frac`
+- add `samp_size` (volume of water collected) and `samp_vol_we_dna_ext` (volume of water filtered for DNA extraction) columns
+
+ and rearrange some data
+ 
+- make latitude and longitude values into decimals, have them in a combined field `lat_lon` and in separate fields `latitude` and `longitude`
+- separate collection_date in to year, month, day, time
+- streamline column names for environmental metadata (including units in the name for now)
+
 
 
 
