@@ -62,4 +62,14 @@ Here, we are filtering all samples based on depth because I am only working with
 
 It is notable that one of the TARA samples notes a range in the depth column: `Range found in 'run': ERR599001 with depth: 5-160`. For now, I have taken the average, but may remove this run later because I cannot trust the depth value
 
+### Optionally `safeguardPostDepthFilter.R`
+
+This is an optional step in which we export all the dataframes we will continue working with from R into our `data` directory.
+The names follow the structure [project_acronym]_metadata_save.
+
+### Link to metagenomics data download `exportRunAccessionTxt.R`
+
+This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
+
+
 
