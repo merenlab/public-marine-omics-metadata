@@ -251,5 +251,42 @@ And rearranged some data and standardised the column names
 - create the column 'collection_date' from 'event_date.time_start' and then split 'collection_date' into 'year', 'month', 'day', and 'time' (if time = 99:99, it will be NA) columns
 - Rename columns for environmental metadata to follow our naming structure
 
+### TARA
+
+#### standardise and handle metadata with `patchNstandardiseTARA.R`
+
+Here, we
+- make sure the metadata keys follow naming conventions
+- make `lat_lon` field with concatenates `latitude` and `longitude`
+- concatenate the filter size thresholds into `size_frac`
+- split `collection_date` into year, month, day, and time
+- take the `layer` info out of `environmental_feature`
+- rename the columns for env metadata to match the other dataframes
+- remove any samples that do not match the filter sizes we are focusing on 
+
+
+> [!NOTE]
+> missing information on volume filtered (could not find this in publications)
+
+> [!NOTE]
+> one of the runs (ERR1701760) has a very different filter size range (1.6 - 20.0). I removed that one.
+
+
+### OSD
+
+#### standardise and handle metadata with `patchNstandardiseOSD.R`
+
+Here, we
+- make sure the metadata keys follow naming conventions
+- add the filter size info from the OSD handbook https://store.pangaea.de/Projects/OSD_2014/OSD_Handbook_v2_June_2014.pdf and concatenate the filter size thresholds into `size_frac`
+- make `lat_lon` field with concatenates `latitude` and `longitude`
+- split `collection_date` into year, month, day, and time
+- take the `layer` info (only one sample notes "deep chlorophyll maximum", all others surface water)
+- rename the columns for env metadata to match the other dataframes
+- remove any samples that specify that they are freshwater
+
+> [!NOTE]
+> missing information on volume filtered (have to see if one can deduct this from https://store.pangaea.de/Projects/OSD_2014/OSD_Handbook_v2_June_2014.pdf, which notes that it could e 10-20 liter...
+
 
 
