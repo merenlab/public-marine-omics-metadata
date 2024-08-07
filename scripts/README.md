@@ -292,3 +292,14 @@ Here, we
 > look into "event_device" renaming?
 
 
+---
+
+TO LOOK INTO
+
+- layer input same for all?
+- add device info to core?
+- rmove HOT samples w/o metadata
+- check environmental_package for all
+- 
+
+
