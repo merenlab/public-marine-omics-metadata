@@ -204,5 +204,5 @@ Anyhow, we will add some more information from the text of the publication https
 - remove environemental metadata columns that have non-values (-0.9 or -0.99 for samples) and remove csal_dog because we are using bsal_dog (has more values) 
 
 > [!NOTE]
-> lat and lon have very few or no decimals. May patch since we know where the HOT sampling took place.
+> lat and lon have very few or no decimals. May patch since we know where the HOT sampling took place. Cross-checked with the lat_lon values in HOT3: 158 seems to be the average, so okay to keep it like it is
 
