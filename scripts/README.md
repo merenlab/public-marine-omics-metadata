@@ -230,3 +230,26 @@ We will add some more information from the text of the publication https://doi.o
 - streamline column names for environmental metadata (including units in the name for now)
 - remove environemental metadata columns that have non-values (-999 for samples) and remove columns we won't be using since other projects don't have them
 
+
+### MAL
+
+Sánchez, P., Coutinho, F.H., Sebastián, M. et al. Marine picoplankton metagenomes and MAGs from eleven vertical profiles obtained by the Malaspina Expedition. Sci Data 11, 154 (2024). https://doi.org/10.1038/s41597-024-02974-1
+
+#### link ENA metadata to metadata from the data publication and standardise it in `patchNstandardiseMAL.R` 
+
+Here, we
+- import Supplementary Table 02 from the data publication
+- added the `layer` information (DCM or not) the ENA dataframe based on the "sample_name" = "sample_alias"
+
+We then continued to add some information mentioned in the text of the data pubilcation
+- samp_size (ml of water collected)
+- samp_vol_we_dna_ext (ml of of water filtered for DNA extraction)
+
+And rearranged some data and standardised the column names
+- Concatenate lower and upper filter into size_frac
+- Create new columns 'latitude' and 'longitude' (prev had _start suffix) and then concatenate them into 'lat_lon'
+- create the column 'collection_date' from 'event_date.time_start' and then split 'collection_date' into 'year', 'month', 'day', and 'time' (if time = 99:99, it will be NA) columns
+- Rename columns for environmental metadata to follow our naming structure
+
+
+
