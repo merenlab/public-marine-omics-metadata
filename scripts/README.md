@@ -181,8 +181,7 @@ Here, we
 
 [This is your captain speaking. To proceed:] get additional HOT metadata from the HOTDOG portal as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/2
 
-- import metadata from HOTDOG 2003-2004 and 2009
-- combine the two dataframes
+- import metadata from HOTDOG 2003-2010
 - clean the column names
 - merge the dataframes based on the `bottle_id_pub` with the suffix `_dog` for all new metadata keys
 
@@ -205,4 +204,29 @@ Anyhow, we will add some more information from the text of the publication https
 
 > [!NOTE]
 > lat and lon have very few or no decimals. May patch since we know where the HOT sampling took place. Cross-checked with the lat_lon values in HOT3: 158 seems to be the average, so okay to keep it like it is
+
+
+
+### BATS
+
+[This is your captain speaking. To proceed:] get additional BATS metadata from the https://bats.bios.asu.edu portal as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/3
+
+#### link ENA metadata to metadata on https://bats.bios.asu.edu and to metadata mentioned in the data publication `patchNstandardiseBATS.R` 
+
+- import metadata from https://bats.bios.asu.edu
+- merge the dataframes based on the `bottle_id` with the suffix `_edu` for all new metadata keys
+
+We will add some more information from the text of the publication https://doi.org/10.1038/sdata.2018.176
+
+- add size fractionation information, `size_fraction_lower_threshold`, `size_fraction_upper_threshold` and `size_frac`
+- add `samp_size` (volume of water collected) and `samp_vol_we_dna_ext` (volume of water filtered for DNA extraction) columns
+- add `layer` based on the information in the publication (for each date they got sample from surface water, the deep chlorophyll maximum, and the bottom of the euphotic zone)
+
+ and rearrange/clean up some data
+ 
+- make latitude and longitude values into decimals, have them in a combined field `lat_lon` and in separate fields `latitude` and `longitude` (is very minimal)
+- separate collection_date in to year, month, day
+- make `time` column from Time_edu with format hh:mm
+- streamline column names for environmental metadata (including units in the name for now)
+- remove environemental metadata columns that have non-values (-999 for samples) and remove columns we won't be using since other projects don't have them
 
