@@ -140,7 +140,7 @@ Now we will add some more information from the text of the publication https://d
 - add size fractionation information, `size_fraction_lower_threshold`, `size_fraction_upper_threshold` and `size_frac`
 - add `samp_size` (volume of water collected) and `samp_vol_we_dna_ext` (volume of water filtered for DNA extraction) columns
 
- and rearrange some data
+ and rearrange/clean up some data
  
 - make latitude and longitude values into decimals, have them in a combined field `lat_lon` and in separate fields `latitude` and `longitude`
 - separate collection_date in to year, month, day, time
@@ -189,24 +189,20 @@ Here, we
 > [!NOTE]
 For some bottles, there is no information
 
+Anyhow, we will add some more information from the text of the publication https://doi.org/10.1038/sdata.2018.176
 
-```
-> HOT1_pubNdog030409_merged$date_dog
- [1] " 022404" " 022404" " 042004" " 051804" " 061504" " 081504" " 081504" " 092804" " 103104" " 112704" NA        NA        NA        " 011703"
-[15] " 022503" " 032803" " 042303" " 052003" " 061903" " 061903" " 071903" " 082003" " 110903" NA        " 122003" " 122003" " 101403" NA       
-[29] " 012104" " 012104" " 031904" NA        NA       
-> HOT1_pubNdog030409_merged$bottle_id_pub
- [1] "1560200314" "1560200308" "1580200313" "1590200314" "1600200414" "1620200414" "1620200408" "1630200414" "1640201117" "1650200419"
-[11] "1650200409" "1660200514" "1660200508" "1440200914" "1450200318" "1460200314" "1470200314" "1480200316" "1490200314" "1490200308"
-[21] "1500200314" "1510200316" "1530200314" "1530200308" "1540201018" "1540201010" "1520200320" "1520200308" "1550200314" "1550200308"
-[31] "1570200323" "2140200308" "2160200304"
-> HOT1_pubNdog030409_merged$collection_date
- [1] "2004-02-24" "2004-02-24" "2004-04-20" "2004-05-18" "2004-06-15" "2004-08-15" "2004-08-15" "2004-09-28" "2004-10-10" "2004-11-10"
-[11] "2004-11-10" "2004-12-14" "2004-12-14" "2003-01-17" "2003-02-25" "2003-03-28" "2003-04-23" "2003-05-20" "2003-06-19" "2003-06-19"
-[21] "2003-07-19" "2003-08-20" "2003-11-09" "2003-11-09" "2003-12-20" "2003-12-20" "2003-10-14" "2003-10-14" "2004-01-21" "2004-01-21"
-[31] "2004-03-19" "2009-08-19" "2009-11-04"
-```
+- add size fractionation information, `size_fraction_lower_threshold`, `size_fraction_upper_threshold` and `size_frac`
+- add `samp_size` (volume of water collected) and `samp_vol_we_dna_ext` (volume of water filtered for DNA extraction) columns
+- add `layer` based on the information in the publication (for each date they got sample from surface water, the deep chlorophyll maximum, and the bottom of the euphotic zone)
 
-I noticed that for some of the samples, where we got information from HOTDOG, the date_dog and the collection_date_pub do not match and the date in `date_dog` is significantly later. So perhaps, I have to increase the date range to capture those. Example: `collection_date_pub` = 2004-11-10 WHILE date_dog `112704`. Retry with that.
+ and rearrange/clean up some data
+ 
+- make latitude and longitude values into decimals, have them in a combined field `lat_lon` and in separate fields `latitude` and `longitude` (is very minimal)
+- separate collection_date in to year, month, day, time
+- create local_time by substracting 10h from time (as noted by [HOT DOGS tutorial]([url](https://hahana.soest.hawaii.edu/hot/hot-dogs/documentation/example1.html))
+- streamline column names for environmental metadata (including units in the name for now)
+- remove environemental metadata columns that have non-values (-0.9 or -0.99 for samples) and remove csal_dog because we are using bsal_dog (has more values) 
 
+> [!NOTE]
+> lat and lon have very few or no decimals. May patch since we know where the HOT sampling took place.
 
