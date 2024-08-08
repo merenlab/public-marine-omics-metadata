@@ -292,6 +292,29 @@ Here, we
 > look into "event_device" renaming?
 
 
+### BGS
+
+#### standardise and handle metadata with `patchNstandardiseBGS.R`
+
+Here, we
+- download the Supplementary Table from the BGS data publication https://doi.org/10.1038/s41597-021-00889-9
+- make sure the metadata keys follow naming conventions
+- merge the supplementary table inforamtion with the metadata from ENA
+- based on the new inforamtion, redo the depth filtering
+
+> [!NOTE]
+> In the publicaiton, they had said all samples came from roughly the same depth, either 3-5 m or 7m. In the supplementary table from the publication, however, we see that some (even if very few) do not follow that pattern. Thus, I re-did the depth filtering. 2 Samples were filtered out.
+
+- add the filter size info from the publication
+- make `lat_lon` field with concatenates `latitude` and `longitude`
+- split `collection_date` into year, month, day, and time
+- add `local_time`
+- take the `layer` info (all  surface water)
+- rename the columns for env metadata to match the other dataframes
+
+> [!NOTE]
+> I did a whole other thing, following the trail of data noted in table 1 of the publication, but it was a tangled mess that frustrated me enough to say: "rather not work with salinity values for all projects than spend another day on this" (at least for now)..
+
 ---
 
 TO LOOK INTO
