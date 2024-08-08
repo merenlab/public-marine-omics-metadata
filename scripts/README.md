@@ -186,7 +186,7 @@ Here, we
 - merge the dataframes based on the `bottle_id_pub` with the suffix `_dog` for all new metadata keys
 
 > [!NOTE]
-For some bottles, there is no information
+For some bottles, there is no information. Those samples will have to be removed.
 
 Anyhow, we will add some more information from the text of the publication https://doi.org/10.1038/sdata.2018.176
 
@@ -200,7 +200,8 @@ Anyhow, we will add some more information from the text of the publication https
 - separate collection_date in to year, month, day, time
 - create local_time by substracting 10h from time (as noted by [HOT DOGS tutorial]([url](https://hahana.soest.hawaii.edu/hot/hot-dogs/documentation/example1.html))
 - streamline column names for environmental metadata (including units in the name for now)
-- remove environemental metadata columns that have non-values (-0.9 or -0.99 for samples) and remove csal_dog because we are using bsal_dog (has more values) 
+- remove environemental metadata columns that have non-values (-0.9 or -0.99 for samples) and remove csal_dog because we are using bsal_dog (has more values)
+- remove rows with samples that do not have temperature info
 
 > [!NOTE]
 > lat and lon have very few or no decimals. May patch since we know where the HOT sampling took place. Cross-checked with the lat_lon values in HOT3: 158 seems to be the average, so okay to keep it like it is
