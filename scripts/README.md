@@ -145,6 +145,8 @@ Now we will add some more information from the text of the publication https://d
 - make latitude and longitude values into decimals, have them in a combined field `lat_lon` and in separate fields `latitude` and `longitude`
 - separate collection_date in to year, month, day, time
 - streamline column names for environmental metadata (including units in the name for now)
+- add emply columns on `layer` and `local_time`
+- add column on `environmental_package` = water
 
 > [!NOTE]
 No information on layers to be found
@@ -202,6 +204,7 @@ Anyhow, we will add some more information from the text of the publication https
 - streamline column names for environmental metadata (including units in the name for now)
 - remove environemental metadata columns that have non-values (-0.9 or -0.99 for samples) and remove csal_dog because we are using bsal_dog (has more values)
 - remove rows with samples that do not have temperature info
+- add column on `environmental_package` = water
 
 > [!NOTE]
 > lat and lon have very few or no decimals. May patch since we know where the HOT sampling took place. Cross-checked with the lat_lon values in HOT3: 158 seems to be the average, so okay to keep it like it is
@@ -230,6 +233,8 @@ We will add some more information from the text of the publication https://doi.o
 - make `time` column from Time_edu with format hh:mm
 - streamline column names for environmental metadata (including units in the name for now)
 - remove environemental metadata columns that have non-values (-999 for samples) and remove columns we won't be using since other projects don't have them
+- add empty column on `local_time`
+- add column on `environmental_package` = water
 
 
 ### MAL
@@ -240,7 +245,7 @@ Sánchez, P., Coutinho, F.H., Sebastián, M. et al. Marine picoplankton metageno
 
 Here, we
 - import Supplementary Table 02 from the data publication
-- added the `layer` information (DCM or not) the ENA dataframe based on the "sample_name" = "sample_alias"
+- added the `layer` information (DCM or not) the ENA dataframe based on the "sample_name" = "sample_alias" and made it match the values of the other dfs (epipelagic = surface water; DCM = deep chlorophyll maximum)
 
 We then continued to add some information mentioned in the text of the data pubilcation
 - samp_size (ml of water collected)
@@ -251,6 +256,7 @@ And rearranged some data and standardised the column names
 - Create new columns 'latitude' and 'longitude' (prev had _start suffix) and then concatenate them into 'lat_lon'
 - create the column 'collection_date' from 'event_date.time_start' and then split 'collection_date' into 'year', 'month', 'day', and 'time' (if time = 99:99, it will be NA) columns
 - Rename columns for environmental metadata to follow our naming structure
+- add empty column on `local_time`
 
 ### TARA
 
@@ -264,7 +270,9 @@ Here, we
 - take the `layer` info out of `environmental_feature`
 - rename the columns for env metadata to match the other dataframes
 - remove any samples that do not match the filter sizes we are focusing on 
-
+- add empty column on `local_time`
+- add empty column on `samp_size`
+- add empty column on `samp_vol_we_dna_ext`
 
 > [!NOTE]
 > missing information on volume filtered (could not find this in publications)
@@ -285,6 +293,9 @@ Here, we
 - take the `layer` info (only one sample notes "deep chlorophyll maximum", all others surface water)
 - rename the columns for env metadata to match the other dataframes
 - remove any samples that specify that they are freshwater
+- add empty column on `local_time`
+- add empty column on `samp_size`
+- add empty column on `samp_vol_we_dna_ext`
 
 > [!NOTE]
 > missing information on volume filtered (have to see if one can deduct this from https://store.pangaea.de/Projects/OSD_2014/OSD_Handbook_v2_June_2014.pdf, which notes that it could e 10-20 liter...
@@ -312,6 +323,10 @@ Here, we
 - add `local_time`
 - take the `layer` info (all  surface water)
 - rename the columns for env metadata to match the other dataframes
+- add empty column on `samp_size`
+- add empty column on `samp_vol_we_dna_ext`
+- add empty column on `salinity_pss` (all other dfs have values here)
+- add "water" in `environmental_package`
 
 > [!NOTE]
 > I did a whole other thing, following the trail of data noted in table 1 of the publication, but it was a tangled mess that frustrated me enough to say: "rather not work with salinity values for all projects than spend another day on this" (at least for now)..
@@ -327,7 +342,10 @@ Here, we
 - split `collection_date` into year, month, and day
 - take the `local_time` and make it into `time` (wherever values were given)
 - rename the columns for env metadata to match the other dataframes
-
+- add empty column on `samp_size`
+- add empty column on `samp_vol_we_dna_ext`
+- add empty column on `layer`
+- add "water" in `environmental_package`
 
 
 ---
