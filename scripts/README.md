@@ -315,14 +315,22 @@ Here, we
 > [!NOTE]
 > I did a whole other thing, following the trail of data noted in table 1 of the publication, but it was a tangled mess that frustrated me enough to say: "rather not work with salinity values for all projects than spend another day on this" (at least for now)..
 
+### HOT3
+
+#### standardise and handle metadata with `patchNstandardiseHOT3.R`
+
+Here, we
+- make sure the metadata keys follow naming conventions
+- add the filter size info from Mende, D.R., Bryant, J.A., Aylward, F.O. et al. Environmental drivers of a microbial genomic transition zone in the ocean’s interior. Nat Microbiol 2, 1367–1373 (2017). https://doi.org/10.1038/s41564-017-0008-3
+- make `lat_lon` field with concatenates `latitude` and `longitude`
+- split `collection_date` into year, month, and day
+- take the `local_time` and make it into `time` (wherever values were given)
+- rename the columns for env metadata to match the other dataframes
+
+
+
 ---
 
-TO LOOK INTO
 
-- layer input same for all?
-- add device info to core?
-- rmove HOT samples w/o metadata
-- check environmental_package for all
-- 
 
 
