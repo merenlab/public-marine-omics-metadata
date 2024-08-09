@@ -2,6 +2,44 @@
 
 Background information
 
+
+## table of contents
+
+1. [`ENAmetadataKingfisherDownload.sh`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#1-enametadatakingfisherdownloadsh)
+2. [`cleanKingfisherTARA.py`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#2-cleankingfishertarapy)
+3. [`importENAmetadata.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#3-importenametadatar)
+4.  [`sepBATSandHOT.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#4-sepbatsandhotr)
+5.  [`metagenomicsNpairedOnly.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#5-metagenomicsnpairedonlyr)
+6.  [`checkNpatchNfilterDepth.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#6-checknpatchnfilterdepthr)
+- [Optionally `safeguardPostDepthFilter.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#optionally-safeguardpostdepthfilterr)
+7. [Patch and Standardize metadata of each project](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#7-patch-and-standardize-metadata-of-each-project)
+    - [bioGEOTRACES](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#biogeotraces)
+       - [Download metadata from publication: `download_SciDataTable_BGT.py`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#download-metadata-from-publication-download_scidatatable_bgtpy)
+       - [link ENA metadata to metadata on BODC and to metadata mentioned in the data publication `patchNstandardiseBGT.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-on-bodc-and-to-metadata-mentioned-in-the-data-publication-patchnstandardisebgtr)
+    - [HOT1](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#hot1)
+       - [Download metadata from publication: `download_SciDataTable_BGT.py`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#download-metadata-from-publication-download_scidatatable_bgtpy-1)
+       - [link ENA metadata to metadata on HOTDOG and to metadata mentioned in the data publication `patchNstandardiseHOT1.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-on-hotdog-and-to-metadata-mentioned-in-the-data-publication-patchnstandardisehot1r)
+    - [BATS](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#bats)
+       - [link ENA metadata to metadata on https://bats.bios.asu.edu and to metadata mentioned in the data publication `patchNstandardiseBATS.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-on-httpsbatsbiosasuedu-and-to-metadata-mentioned-in-the-data-publication-patchnstandardisebatsr)
+    - [MAL]([url](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#mal))
+       - [link ENA metadata to metadata from the data publication and standardise it in `patchNstandardiseMAL.R](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-from-the-data-publication-and-standardise-it-in-patchnstandardisemalr)
+    - [TARA](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#tara)
+       - [standardise and handle metadata with `patchNstandardiseTARA.R](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisetarar)
+    - [OSD](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#osd)
+       - [standardise and handle metadata with `patchNstandardiseOSD.R ](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardiseosdr)
+    - [BGS](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#bgs)
+       - [standardise and handle metadata with patchNstandardiseBGS.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisebgsr)
+    - [HOT3](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#hot3)
+       - [standardise and handle metadata with `patchNstandardiseHOT3.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisehot3r)
+- [Link to metagenomics data download: `exportRunAccessionTxt.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-to-metagenomics-data-download-exportrunaccessiontxtr)
+8. [Combine metadatasets `bringTogether.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#8-combine-metadatasets-bringtogetherr)
+
+
+
+
+
+
+
 ## scripts
 
 ### 1. `ENAmetadataKingfisherDownload.sh`
