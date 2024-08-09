@@ -20,15 +20,7 @@ For details of the metadata curation efforts that include the following datasets
 > - are from samples collected in ≤100 m depth
 > - are from samples associated with at least environmental metadata on `temperature`
 
-* Tara Oceans Project
-* Ocean Sampling Day 2014
-* Bio-GO-SHIP
-* bioGEOTRACES
-* Hawaii Ocean Time-Series ALOHA
-* BATS
-* Western Channel Observatory L4 Station
-
-Quick overview of dataset currently covered: 
+Quick overview of projects currently covered: 
 Project name  |  date range | depth range | project accession # | (Data) publication | Other sources | Note
 -- | -- | -- | -- | -- | -- | --  
 
