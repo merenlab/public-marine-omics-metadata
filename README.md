@@ -14,11 +14,11 @@ The purpose of this section list the metagenomes included in the current metadat
 For details of the metadata curation efforts that include the following datasets and publications that originally describe them see scripts/README.md
 
 > [!NOTE]
-Please note, that the current collection of curated metadata is limited to runs from the projects noted below that
-- are metagenomes
-- are paired-end
-- are from samples collected in ≤100 m depth
-- are from samples associated with at least environmental metadata on `temperature`
+> Please note, that the current collection of curated metadata is limited to runs from the projects noted below that
+> - are metagenomes
+> - are paired-end
+> - are from samples collected in ≤100 m depth
+> - are from samples associated with at least environmental metadata on `temperature`
 
 * Tara Oceans Project
 * Ocean Sampling Day 2014
