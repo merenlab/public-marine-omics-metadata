@@ -4,7 +4,7 @@ Welcome to the Standardized Metadata Collection for Omics Data repository! This 
 
 Our goal is to present metadata in a standardized fashion, both semantically and syntactically, ensuring it is ready for analysis. We will provide guidance and examples to help others contribute. By pooling our efforts, we aim to avoid the duplication of work involved in preparing individual metadata sets and make the process more efficient, considering the significant amount of effort required for metadata preparation.
 
-We are starting by providing the workflow we followed (see scripts/README.md) to get the metadata for the projects listed below as well as, of course sharing the final product.
+We are starting by providing the workflow we followed (see scripts/README.md) to get the metadata for the projects listed below. Of course sharing the final product: metagenomes.txt.
 
 
 # Metagenomomes
