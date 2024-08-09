@@ -9,7 +9,7 @@ We are starting by providing the workflow we followed (see scripts/README.md) to
 
 # Metagenomomes
 
-The purpose of this section list the metagenomes included in the current metadata curation effort. This includes the project name, (data) publication, date range, depth range, number of samples, number of runs, project accession number, and other relevant information about the projects and their metadata below.
+The purpose of this section is to list the metagenomes included in the current metadata curation effort. This includes the project name, (data) publication, date range, depth range, number of samples, number of runs, project accession number, and other relevant information about the projects and their metadata below.
 
 For details of the metadata curation efforts that include the following datasets and publications that originally describe them see scripts/README.md
 
