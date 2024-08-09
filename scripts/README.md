@@ -67,15 +67,13 @@ It is notable that one of the TARA samples notes a range in the depth column: `R
 This is an optional step in which we export all the dataframes we will continue working with from R into our `data` directory.
 The names follow the structure [project_acronym]_metadata_save.
 
-### Link to metagenomics data download `exportRunAccessionTxt.R`
-
-This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
-
 ---
 
 From here on, we are focusing on patching the metadata of the individual projects 
 
 ---
+
+### 7. Patch and Standardize metadata of each project
 
 Information we are aiming for:
 
@@ -350,6 +348,27 @@ Here, we
 
 ---
 
+### Link to metagenomics data download: `exportRunAccessionTxt.R`
+
+This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
 
 
+### 8. Combine metadatasets `bringTogether.R`
+
+Here, we perform several steps to clean, merge, and enhance data from multiple dataframes, each representing different projects.
+
+First, we determine  the number of samples and runs that made it past metadata standardisation
+- count and display the unique entries for the biosample and run columns in each dataframe.
+
+Then, we combine the metadata dataframes of the different projects
+- It then identifies the common columns across all dataframes and renames any non-common columns to avoid conflicts during merging.
+- After renaming, the dataframes are merged using a full outer join on the common columns.
+- The merged dataframe is reordered for easier analysis, and a subset containing only the common columns is saved separately.
+
+Lastly, we add more information based on values in the dataframes
+- The script then enriches the data by
+   - determining the season based on the collection date and the hemisphere (using latitude) and
+   - by categorizing locations as either "Coastal" or "Open Ocean" based on their proximity to coastlines.
+ 
+The final outputs are saved to text files for further analysis.
 
