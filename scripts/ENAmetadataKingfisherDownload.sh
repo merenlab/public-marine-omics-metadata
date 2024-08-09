@@ -74,3 +74,4 @@ for i in "${!projects[@]}"; do
 done
 
 echo "ENA metadata download and counting complete for all projects."
+

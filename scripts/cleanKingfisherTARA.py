@@ -52,3 +52,4 @@ elif 'title' in df.columns:
 df.to_csv('../data/PRJEB1787_TARA_metadata_clean.tsv', sep='\t', index=False)
 
 print("Columns combined and file saved as '../data/PRJEB1787_TARA_metadata_clean.tsv'")
+
