@@ -163,7 +163,7 @@ Here, we
 - subset that table to only keep the values pertaining to BGT
 - add the information on the `Bottle ID` (is also included in the ENA dataset but has some weird values sometimes) and `Collection Date` (this includes time, which the `collection_date` from ENA does not) to our dataframe with the suffix `_pub`
 
-[This is your captain speaking. To proceed:] get additional BGT metadata from the BODC as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/1
+🧚🏻 [This is your captain speaking. To proceed:] get additional BGT metadata from the BODC as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/1
 
 - import metadata from BODC
 - remove any columns with NAs only
@@ -217,7 +217,7 @@ Here, we
 - subset that table to only keep the values pertaining to BGT
 - add the information on the `Bottle ID` (is also included in the ENA dataset but has some weird values sometimes) and `Collection Date` (this includes time, which the `collection_date` from ENA does not) to our dataframe with the suffix `_pub`
 
-[This is your captain speaking. To proceed:] get additional HOT metadata from the HOTDOG portal as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/2
+🧚🏻 [This is your captain speaking. To proceed:] get additional HOT metadata from the HOTDOG portal as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/2
 
 - import metadata from HOTDOG 2003-2010
 - clean the column names
@@ -249,7 +249,7 @@ Anyhow, we will add some more information from the text of the publication https
 
 ### BATS
 
-[This is your captain speaking. To proceed:] get additional BATS metadata from the https://bats.bios.asu.edu portal as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/3
+🧚🏻 [This is your captain speaking. To proceed:] get additional BATS metadata from the https://bats.bios.asu.edu portal as described here: https://github.com/merenlab/public-marine-omics-metadata/issues/3
 
 #### link ENA metadata to metadata on https://bats.bios.asu.edu and to metadata mentioned in the data publication `patchNstandardiseBATS.R` 
 
