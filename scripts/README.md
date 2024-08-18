@@ -1,6 +1,6 @@
 # A directory for ad-hoc scripts and workflows to acquire metadata
 
-Background information
+This README.md details the entire process of acquiring, patching, standardising, and filtering the metadata associated with the following project accession numbers PRJNA385855 (Bermuda Atlantic Time-series Study, Hawaii Ocean Time-series), PRJNA385854 (bioGEOTRACES), PRJNA656268 (Bio-GO-SHIP), PRJNA352737 (Hawaii Ocean Time-series), PRJEB52452 (Malaspina), PRJEB8682 (Ocean Sampling Day), and Tara Oceans (PRJEB1787).
 
 
 ## table of contents
