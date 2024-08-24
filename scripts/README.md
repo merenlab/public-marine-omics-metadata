@@ -403,10 +403,12 @@ Then, we combine the metadata dataframes of the different projects
 - After renaming, the dataframes are merged using a full outer join on the common columns.
 - The merged dataframe is reordered for easier analysis, and a subset containing only the common columns is saved separately.
 
-Lastly, we add more information based on values in the dataframes
+Then, we add more information based on values in the dataframes
 - The script then enriches the data by
    - determining the season based on the collection date and the hemisphere (using latitude) and
    - by categorizing locations as either "Coastal" or "Open Ocean" based on their proximity to coastlines.
+ 
+Lastly, we will filter again based on the inforamtion just added (some are classified as land).
  
 The final outputs are saved to text files for further analysis.
 
