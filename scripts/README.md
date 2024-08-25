@@ -31,8 +31,8 @@ This README.md details the entire process of acquiring, patching, standardising,
        - [standardise and handle metadata with patchNstandardiseBGS.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisebgsr)
     - [HOT3](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#hot3)
        - [standardise and handle metadata with `patchNstandardiseHOT3.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisehot3r)
-- [Link to metagenomics data download: `exportRunAccessionTxt.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-to-metagenomics-data-download-exportrunaccessiontxtr)
 8. [Combine metadatasets `bringTogether.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#8-combine-metadatasets-bringtogetherr)
+- [Link to metagenomics data download: `exportSRArunAccessionTxt.R`]
 
 
 
@@ -388,10 +388,6 @@ Here, we
 
 ---
 
-### Link to metagenomics data download: `exportRunAccessionTxt.R`
-
-This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
-
 
 ### 8. Combine metadatasets `bringTogether.R`
 
@@ -414,3 +410,6 @@ Lastly, we will filter again based on the inforamtion just added (some are class
  
 The final outputs are saved to text files for further analysis.
 
+### Link to metagenomics data download: `exportSRArunAccessionTxt.R`
+
+This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
