@@ -24,7 +24,7 @@ This README.md details the entire process of acquiring, patching, standardising,
     - [MAL](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#mal)
        - [link ENA metadata to metadata from the data publication and standardise it in `patchNstandardiseMAL.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-from-the-data-publication-and-standardise-it-in-patchnstandardisemalr)
     - [TARA](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#tara)
-       - [standardise and handle metadata with `patchNstandardiseTARA.R``](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisetarar)
+       - [standardise and handle metadata with `patchNstandardiseTARA.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisetarar)
     - [OSD](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#osd)
        - [standardise and handle metadata with `patchNstandardiseOSD.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardiseosdr)
     - [BGS](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#bgs)
