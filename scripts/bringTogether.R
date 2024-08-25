@@ -388,6 +388,15 @@ filtered_df_regions$environment
 
 #########################################
 
+
+# re-add the latitude and longitude information that was eaten up by the location assignment
+
+filtered_df_regions <- filtered_df_regions %>%
+  separate(lat_lon, into = c("latitude", "longitude"), sep = " ", remove = FALSE)
+
+#########################################
+
+# save it
 filtered_df_regions$collection_date <- as.character(filtered_df_regions$collection_date)
 write.table(filtered_df_regions, "data/metagenomes.txt", sep = "\t", row.names = FALSE, quote = FALSE)
 
