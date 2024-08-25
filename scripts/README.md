@@ -32,8 +32,16 @@ This README.md details the entire process of acquiring, patching, standardising,
     - [HOT3](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#hot3)
        - [standardise and handle metadata with `patchNstandardiseHOT3.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisehot3r)
 8. [Combine metadatasets `bringTogether.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#8-combine-metadatasets-bringtogetherr)
+
+---
+
+The following scripts link to anvio
+
+--- 
+
 - [Link to metagenomics data download: `exportSRArunAccessionTxt.R`](https://github.com/merenlab/public-marine-omics-metadata/blob/main/scripts/README.md#link-to-metagenomics-data-download-exportsrarunaccessiontxtr)
 
+- [Link to viualisation with anvi'o]()
 
 
 
@@ -410,6 +418,25 @@ Lastly, we will filter again based on the inforamtion just added (some are class
  
 The final outputs are saved to text files for further analysis.
 
+---
+
+The following scripts link to anvio
+
+--- 
+
 ### Link to metagenomics data download: `exportSRArunAccessionTxt.R`
 
 This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
+
+### Link to viualisation with anvi'o
+
+`filterMetagenomesTxt.py` 
+- We need to make sure that our metadata is following the format that anvi'o expects. That means to use the sample names we used as part of the metagenomics workflow, but also to subset the main metadata table we made in [public-marine-omics-metadata](https://github.com/merenlab/public-marine-omics-metadata/tree/main) to only keep info on the samples that passed our filtering based on coverage and detection here.
+- We will first subset `metagenomes.txt` to only include those samples that passed the filtering and are thus listed in the `unique_samples.txt` we created earlier.
+- Further, the `metagenomes.txt` file currently has multiple rows per sample if there are multiple runs associated with one sample. We will make it such that there is only one row per sample (so one row per layer that we want to associate this with in anvi'o). Of course, ensuring that any differing values across different runs from the same sample are concatenated, and identical values retained as they are.
+
+`prepAnvioMetadata.py`
+- Select the columns we want to bring into anvi'o
+
+
+
