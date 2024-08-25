@@ -32,7 +32,7 @@ This README.md details the entire process of acquiring, patching, standardising,
     - [HOT3](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#hot3)
        - [standardise and handle metadata with `patchNstandardiseHOT3.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisehot3r)
 8. [Combine metadatasets `bringTogether.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#8-combine-metadatasets-bringtogetherr)
-- [Link to metagenomics data download: `exportSRArunAccessionTxt.R`]
+- [Link to metagenomics data download: `exportSRArunAccessionTxt.R`](https://github.com/merenlab/public-marine-omics-metadata/blob/main/scripts/README.md#link-to-metagenomics-data-download-exportsrarunaccessiontxtr)
 
 
 
