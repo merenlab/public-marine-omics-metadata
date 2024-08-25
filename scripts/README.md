@@ -173,7 +173,7 @@ Here, we
 
 Now we will add some more information from the text of the publication https://doi.org/10.1038/sdata.2018.176
 
-- add size fractionation information, `size_fraction_lower_threshold`, `size_fraction_upper_threshold` and `size_frac`
+- add size fractionation information, `size_frac_low`, `size_frac_up` and `size_frac`
 - add `samp_size` (volume of water collected) and `samp_vol_we_dna_ext` (volume of water filtered for DNA extraction) columns
 
  and rearrange/clean up some data
@@ -194,7 +194,7 @@ No information on upwelling system or non-upwelling system
 Information to continue with: bottle_id_pub	biosample	run	bioproject	gbp	library_strategy	library_selection	model	sample_name	taxon_name	experiment_accession	experiment_title	library_name	library_source	library_layout	platform	study_accession	study_alias	sample_alias	sample_accession	collection_date	depth	env_biome	env_feature	env_material	geo_loc_name	geotraces_section	cruise_id	cruise_station	bottle_id	biosamplemodel	study_title	design_description	study_abstract   number_of_runs_for_sample	spots	bases	run_size	published	read1_length_average	read1_length_stdev	read2_length_average	read2_length_stdev
 
 > [!NOTE]
-"Special" information to continue with: year	month	day	time temperature_degC	salinity_pss   oxygen_umolKg	phosphate_umolKg  silicate_umolKg	nitrate_umolKg  nitrite_umolKg dic_umolKg	doc_umolKg chla_ngL	chlb_ngL	chlc_ngL size_fraction_lower_threshold	size_fraction_upper_threshold	size_frac	samp_size	samp_vol_we_dna_ext	latitude	longitude	lat_lon
+"Special" information to continue with: year	month	day	time temperature_degC	salinity_pss   oxygen_umolKg	phosphate_umolKg  silicate_umolKg	nitrate_umolKg  nitrite_umolKg dic_umolKg	doc_umolKg chla_ngL	chlb_ngL	chlc_ngL size_frac_low	size_frac_up	size_frac	samp_size	samp_vol_we_dna_ext	latitude	longitude	lat_lon
 `
 
 ### HOT1
@@ -228,7 +228,7 @@ For some bottles, there is no information. Those samples will have to be removed
 
 Anyhow, we will add some more information from the text of the publication https://doi.org/10.1038/sdata.2018.176
 
-- add size fractionation information, `size_fraction_lower_threshold`, `size_fraction_upper_threshold` and `size_frac`
+- add size fractionation information, `size_frac_low`, `size_frac_up` and `size_frac`
 - add `samp_size` (volume of water collected) and `samp_vol_we_dna_ext` (volume of water filtered for DNA extraction) columns
 - add `layer` based on the information in the publication (for each date they got sample from surface water, the deep chlorophyll maximum, and the bottom of the euphotic zone)
 
@@ -258,7 +258,7 @@ Anyhow, we will add some more information from the text of the publication https
 
 We will add some more information from the text of the publication https://doi.org/10.1038/sdata.2018.176
 
-- add size fractionation information, `size_fraction_lower_threshold`, `size_fraction_upper_threshold` and `size_frac`
+- add size fractionation information, `size_frac_low`, `size_frac_up` and `size_frac`
 - add `samp_size` (volume of water collected) and `samp_vol_we_dna_ext` (volume of water filtered for DNA extraction) columns
 - add `layer` based on the information in the publication (for each date they got sample from surface water, the deep chlorophyll maximum, and the bottom of the euphotic zone)
 
@@ -288,7 +288,7 @@ We then continued to add some information mentioned in the text of the data pubi
 - samp_vol_we_dna_ext (ml of of water filtered for DNA extraction)
 
 And rearranged some data and standardised the column names
-- Concatenate lower and upper filter into size_frac
+- Concatenate lower and upper filter size into `size_frac` and rename individual values to `size_frac_low` and `size_frac_up`
 - Create new columns 'latitude' and 'longitude' (prev had _start suffix) and then concatenate them into 'lat_lon'
 - create the column 'collection_date' from 'event_date.time_start' and then split 'collection_date' into 'year', 'month', 'day', and 'time' (if time = 99:99, it will be NA) columns
 - Rename columns for environmental metadata to follow our naming structure
@@ -301,7 +301,7 @@ And rearranged some data and standardised the column names
 Here, we
 - make sure the metadata keys follow naming conventions
 - make `lat_lon` field with concatenates `latitude` and `longitude`
-- concatenate the filter size thresholds into `size_frac`
+- concatenate lower and upper filter size into `size_frac` and rename individual values to `size_frac_low` and `size_frac_up`
 - split `collection_date` into year, month, day, and time
 - take the `layer` info out of `environmental_feature`
 - rename the columns for env metadata to match the other dataframes
@@ -317,6 +317,8 @@ Here, we
 > one of the runs (ERR1701760) has a very different filter size range (1.6 - 20.0). I removed that one.
 
 > [!NOTE] 2 samples (SAMEA2623295, SAMEA2623919),  with 5 runs (ERR598987, ERR599001, ERR599070, ERR599099, ERR599147) between them are lacking temperature data (9999). Removed.
+
+
 ### OSD
 
 #### standardise and handle metadata with `patchNstandardiseOSD.R`
