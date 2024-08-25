@@ -21,7 +21,7 @@ This README.md details the entire process of acquiring, patching, standardising,
        - [link ENA metadata to metadata on HOTDOG and to metadata mentioned in the data publication `patchNstandardiseHOT1.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-on-hotdog-and-to-metadata-mentioned-in-the-data-publication-patchnstandardisehot1r)
     - [BATS](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#bats)
        - [link ENA metadata to metadata on https://bats.bios.asu.edu and to metadata mentioned in the data publication `patchNstandardiseBATS.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-on-httpsbatsbiosasuedu-and-to-metadata-mentioned-in-the-data-publication-patchnstandardisebatsr)
-    - [MAL]([url](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#mal))
+    - [MAL](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#mal)
        - [link ENA metadata to metadata from the data publication and standardise it in `patchNstandardiseMAL.R](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#link-ena-metadata-to-metadata-from-the-data-publication-and-standardise-it-in-patchnstandardisemalr)
     - [TARA](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#tara)
        - [standardise and handle metadata with `patchNstandardiseTARA.R](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#standardise-and-handle-metadata-with-patchnstandardisetarar)
