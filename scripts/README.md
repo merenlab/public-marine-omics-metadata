@@ -35,7 +35,7 @@ This README.md details the entire process of acquiring, patching, standardising,
 
 ---
 
-The following scripts link to anvio
+The following scripts link to anvi'o
 
 --- 
 
@@ -420,7 +420,7 @@ The final outputs are saved to text files for further analysis.
 
 ---
 
-The following scripts link to anvio
+The following scripts link to anvi'o
 
 --- 
 
