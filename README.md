@@ -7,7 +7,7 @@ Our goal is to present metadata in a standardized fashion, both semantically and
 We are starting by providing the workflow we followed (see scripts/README.md) to get the metadata for the projects listed below. Of course sharing the final product: metagenomes.txt.
 
 
-# Metagenomomes
+# Metagenomes
 
 The purpose of this section is to list the metagenomes included in the current metadata curation effort. This includes the project name, (data) publication, date range, depth range, number of samples, number of runs, project accession number, and other relevant information about the projects and their metadata below.
 
