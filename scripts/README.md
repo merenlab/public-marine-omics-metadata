@@ -35,13 +35,13 @@ This README.md details the entire process of acquiring, patching, standardising,
 
 ---
 
-The following scripts link to anvi'o
+The following scripts connect to [anvi'o](https://anvio.org)
 
 --- 
 
 - [Link to metagenomics data download: `exportSRArunAccessionTxt.R`](https://github.com/merenlab/public-marine-omics-metadata/blob/main/scripts/README.md#link-to-metagenomics-data-download-exportsrarunaccessiontxtr)
 
-- [Link to viualisation with anvi'o]()
+- [Link to visualisation with anvi'o]()
 
 
 
