@@ -41,7 +41,7 @@ The following scripts connect to [anvi'o](https://anvio.org)
 
 - [Link to metagenomics data download: `exportSRArunAccessionTxt.R`](https://github.com/merenlab/public-marine-omics-metadata/blob/main/scripts/README.md#link-to-metagenomics-data-download-exportsrarunaccessiontxtr)
 
-- [Link to visualisation with anvi'o]()
+- [Link to visualisation with anvi'o](https://github.com/merenlab/public-marine-omics-metadata/blob/main/scripts/README.md#link-to-visualisation-with-anvio)
 
 
 
