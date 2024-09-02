@@ -431,7 +431,7 @@ This script links into the download of the metagenomes from the selected runs an
 ### Link to visualisation with anvi'o
 
 `filterMetagenomesTxt.py` 
-- We need to make sure that our metadata is following the format that anvi'o expects. That means to use the sample names we used as part of the metagenomics workflow, but also to subset the main metadata table we made in [public-marine-omics-metadata](https://github.com/merenlab/public-marine-omics-metadata/tree/main) to only keep info on the samples that passed our filtering based on coverage and detection here.
+- We need to make sure that our metadata is following the format that anvi'o expects. That means to use the sample names we used as part of the metagenomics workflow, but also to subset the main metadata table we made above to only keep info on the samples that passed our filtering based on coverage and detection here.
 - We will first subset `metagenomes.txt` to only include those samples that passed the filtering and are thus listed in the `unique_samples.txt` we created earlier.
 - Further, the `metagenomes.txt` file currently has multiple rows per sample if there are multiple runs associated with one sample. We will make it such that there is only one row per sample (so one row per layer that we want to associate this with in anvi'o). Of course, ensuring that any differing values across different runs from the same sample are concatenated, and identical values retained as they are.
 
