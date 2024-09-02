@@ -428,7 +428,7 @@ The following scripts link to anvi'o
 
 This script links into the download of the metagenomes from the selected runs and samples. We are exporting a .txt file with the bioproject and run accession numbers of those samples we wish to continue with.
 
-### Link to viualisation with anvi'o
+### Link to visualisation with anvi'o
 
 `filterMetagenomesTxt.py` 
 - We need to make sure that our metadata is following the format that anvi'o expects. That means to use the sample names we used as part of the metagenomics workflow, but also to subset the main metadata table we made in [public-marine-omics-metadata](https://github.com/merenlab/public-marine-omics-metadata/tree/main) to only keep info on the samples that passed our filtering based on coverage and detection here.
