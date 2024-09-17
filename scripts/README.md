@@ -54,7 +54,7 @@ The following scripts connect to [anvi'o](https://anvio.org)
 
 Here, we are using `Kingfisher` to download metadata from ENA and NCBI.
 
-Woodcroft, B. J., Cunningham, M., Gans, J. D., Bolduc, B. B., & Hodgkins, S. B. (2024). Kingfisher: A utility for procurement of public sequencing data (v0.4.0). Zenodo. https://doi.org/10.5281/zenodo.10525086
+> Woodcroft, B. J., Cunningham, M., Gans, J. D., Bolduc, B. B., & Hodgkins, S. B. (2024). Kingfisher: A utility for procurement of public sequencing data (v0.4.0). Zenodo. https://doi.org/10.5281/zenodo.10525086
 Doc: https://wwood.github.io/kingfisher-download/
 GitHub: https://github.com/wwood/kingfisher-download
 
