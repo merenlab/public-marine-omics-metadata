@@ -5,7 +5,7 @@ This README.md details the entire process of acquiring, patching, standardising,
 
 ## Table of contents
 
-0. Overview
+0. [Overview](https://github.com/merenlab/public-marine-omics-metadata/blob/main/scripts/README.md#overview)
 1. [`ENAmetadataKingfisherDownload.sh`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#1-enametadatakingfisherdownloadsh)
 2. [`cleanKingfisherTARA.py`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#2-cleankingfishertarapy)
 3. [`importENAmetadata.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#3-importenametadatar)
