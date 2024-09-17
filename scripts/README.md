@@ -1,10 +1,11 @@
-# A directory for ad-hoc scripts and workflows to acquire metadata
+# A directory for ad-hoc scripts and workflows to acquire metadata for publicly available metagenomes
 
 This README.md details the entire process of acquiring, patching, standardising, and filtering the metadata associated with the following project accession numbers PRJNA385855 (Bermuda Atlantic Time-series Study, Hawaii Ocean Time-series), PRJNA385854 (bioGEOTRACES), PRJNA656268 (Bio-GO-SHIP), PRJNA352737 (Hawaii Ocean Time-series), PRJEB52452 (Malaspina), PRJEB8682 (Ocean Sampling Day), and Tara Oceans (PRJEB1787).
 
 
 ## Table of contents
 
+0. Overview
 1. [`ENAmetadataKingfisherDownload.sh`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#1-enametadatakingfisherdownloadsh)
 2. [`cleanKingfisherTARA.py`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#2-cleankingfishertarapy)
 3. [`importENAmetadata.R`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#3-importenametadatar)
@@ -45,7 +46,112 @@ The following scripts connect to [anvi'o](https://anvio.org)
 
 
 
+## Overview
 
+### Quick overview of projects included in curated metadata
+
+**Bermuda Atlantic Time-series Study**
+
+Project acronym: BATS
+
+Accession number: PRJNA385855
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJNA385855 [Data set]. Retrieved from https://www.ebi.ac.uk/ena | Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+- Bermuda Atlantic Time-series Study (BATS). (2024). BATS Oceanographic and Biogeochemical Data [bats_bottle.txt]. Retrieved from https://bats.bios.asu.edu/data/
+
+(Data) publication:
+- Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+
+**bioGEOTRACES**
+
+Project acronym: BGT
+
+Accession number: PRJNA385854
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJNA385854 [Data set]. Retrieved from https://www.ebi.ac.uk/ena
+- Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+- GEOTRACES Intermediate Data Product Group (2023). The GEOTRACES Intermediate Data Product 2021v2 (IDP2021v2). NERC EDS British Oceanographic Data Centre NOC. doi:10.5285/ff46f034-f47c-05f9-e053-6c86abc0dc7e
+
+(Data) publication:
+- Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+
+**Bio-GO-SHIP**
+
+Project acronym: BGS
+
+Accession number: PRJNA656268
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJNA656268 [Data set]. Retrieved from https://www.ebi.ac.uk/ena
+- Larkin, A.A., Garcia, C.A., Garcia, N. et al. High spatial resolution global ocean metagenomes from Bio-GO-SHIP repeat hydrography transects. Sci Data 8, 107 (2021). https://doi.org/10.1038/s41597-021-00889-9
+
+(Data) publication:
+- Larkin, A.A., Garcia, C.A., Garcia, N. et al. High spatial resolution global ocean metagenomes from Bio-GO-SHIP repeat hydrography transects. Sci Data 8, 107 (2021). https://doi.org/10.1038/s41597-021-00889-9
+
+**Hawaii Ocean Time-Series ALOHA (2003-2004; 2009)**
+
+Project acronym: HOT1
+
+Accession number: PRJNA385855
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJNA385855 [Data set]. Retrieved from https://www.ebi.ac.uk/ena
+- Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+- Data obtained via the Hawaii Ocean Time-series HOT-DOGS application; University of Hawai'i at Mānoa. National Science Foundation Award # 1756517
+- Hawaii Ocean Time-series (HOT). (2024). HOT-DOGS: Data Organization & Graphical System for the Hawaii Ocean Time-series [Bottle_Extraction]. Retrieved from https://hahana.soest.hawaii.edu/hot/hot-dogs/index.html
+
+(Data) publication:
+- Biller, S., Berube, P., Dooley, K. et al. Marine microbial metagenomes sampled across space and time. Sci Data 5, 180176 (2018). https://doi.org/10.1038/sdata.2018.176
+
+**Hawaii Ocean Time-Series ALOHA (2010-2016)**
+
+Project acronym: HOT3
+
+Accession number: PRJNA352737
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJNA352737 [Data set]. Retrieved from https://www.ebi.ac.uk/ena
+- Mende, D.R., Bryant, J.A., Aylward, F.O. et al. Environmental drivers of a microbial genomic transition zone in the ocean’s interior. Nat Microbiol 2, 1367–1373 (2017). https://doi.org/10.1038/s41564-017-0008-3
+
+(Data) publication: -
+
+**Malaspina Expedition**
+
+Project acronym: MAL
+
+Accession number: PRJEB52452
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJEB52452 [Data set]. Retrieved from https://www.ebi.ac.uk/ena
+- Sánchez, P., Coutinho, F.H., Sebastián, M. et al. Marine picoplankton metagenomes and MAGs from eleven vertical profiles obtained by the Malaspina Expedition. Sci Data 11, 154 (2024). https://doi.org/10.1038/s41597-024-02974-1
+
+(Data) publication:
+- Sánchez, P., Coutinho, F.H., Sebastián, M. et al. Marine picoplankton metagenomes and MAGs from eleven vertical profiles obtained by the Malaspina Expedition. Sci Data 11, 154 (2024). https://doi.org/10.1038/s41597-024-02974-1
+
+**Ocean Sampling Day 2014**
+
+Project acronym: OSD
+
+Accession number: PRJEB8682
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJEB8682 [Data set]. Retrieved from https://www.ebi.ac.uk/ena
+- Ocean Sampling Day Consortium, Participants (2015): Registry of samples and environmental context from the Ocean Sampling Day 2014 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.854419
+
+(Data) publication: -
+
+**Tara Oceans Project**
+
+Project acronym: TARA
+
+Accession number: PRJEB1787
+
+Metadata citation:
+- European Nucleotide Archive (ENA). (2024). Sample Metadata for Project Accession PRJEB1787 [Data set]. Retrieved from https://www.ebi.ac.uk/ena
+
+(Data) publication: -
 
 
 ## scripts
