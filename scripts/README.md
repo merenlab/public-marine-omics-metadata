@@ -153,6 +153,23 @@ Metadata citation:
 
 (Data) publication: -
 
+### Number of samples per project at each step of this metadata curation:
+| Observatory/Cruise                               | #s in metadata  | #s metagenomes and paired end only | #s depth filtering ≤100m | #s after metadata filtering |
+|--------------------------------------------------|:---------------:|:----------------------------------:|:------------------------:|:---------------------------:|
+| Bermuda Atlantic Time-series Study               |        62       |                 62                 |            40            |              40             |
+| bioGEOTRACES                                     |       480       |                 480                |            323           |             323             |
+| Bio-GO-SHIP                                      |       996       |                 971                |            969           |             969             |
+| Hawaii Ocean Time-Series ALOHA (2003-2004; 2009) |        68       |                 68                 |            33            |              28             |
+| Hawaii Ocean Time-Series ALOHA (2007-2009)       |        54       |                  0                 |             -            |              -              |
+| Hawaii Ocean Time-Series ALOHA (2010-2016)       |       773       |                 597                |            230           |             230             |
+| Malaspina                                        |        81       |                 81                 |            16            |              16             |
+| Ocean Sampling Day 2014                          |       162       |                 150                |            150           |             127             |
+| Tara Oceans Project                              |       136       |                 136                |            95            |              92             |
+| Western Channel Observatory                      |        10       |                  0                 |             -            |              -              |
+| All                                              |       2822      |                2545                |           1856           |             1825            |
+
+
+
 
 ## scripts
 
