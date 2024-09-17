@@ -322,7 +322,8 @@ Here, we
 > [!NOTE]
 > one of the runs (ERR1701760) has a very different filter size range (1.6 - 20.0). I removed that one.
 
-> [!NOTE] 2 samples (SAMEA2623295, SAMEA2623919),  with 5 runs (ERR598987, ERR599001, ERR599070, ERR599099, ERR599147) between them are lacking temperature data (9999). Removed.
+> [!NOTE]
+> 2 samples (SAMEA2623295, SAMEA2623919),  with 5 runs (ERR598987, ERR599001, ERR599070, ERR599099, ERR599147) between them are lacking temperature data (9999). Removed.
 
 
 ### OSD
