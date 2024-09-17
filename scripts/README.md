@@ -413,7 +413,7 @@ Then, we add more information based on values in the dataframes
    - determining the season based on the collection date and the hemisphere (using latitude) and
    - by categorizing locations as either "Coastal" or "Open Ocean" based on their proximity to coastlines.
  
-Lastly, we will filter again based on the inforamtion just added (some are classified as land).
+Lastly, we will filter again based on the information just added (some samples are classified as land) and count the number of samples we are left with. This will be our starting list to downloading metagenomes!
  
 The final outputs are saved to text files for further analysis.
 
