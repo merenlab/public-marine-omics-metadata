@@ -523,18 +523,53 @@ Here, we
 
 Here, we perform several steps to clean, merge, and enhance data from multiple dataframes, each representing different projects.
 
+1. Checking for and installing any missing required R packages, and loading them.
+
+2. Counting unique entries for specific columns ("biosample" and "run") across several dataframes.
+
+3. Ensuring that all datasets contain required environmental columns (e.g., "pressure_dbar", "salinity_pss"), and filling in missing columns with NA values.
+
+4. Identifying and removing "weird" data values (e.g., sensor data errors where values consist entirely of 9s).
+
+5. Adding a 'project' column to each dataset to keep track of its source, ensuring consistent column names, and merging the datasets based on common columns.
+
+6. Reordering columns to group related ones together, and saving the merged data to a file ("all_projects.txt").
+
+7. Performing additional filtering to retain only the common columns and saving this subset of the data to another file ("metagenomes.txt").
+
+8. Further processing to:
+   - Add 'layer' information (defaulting to "surface water" where missing).
+   - Add seasonal information based on collection date and hemisphere.
+   - Convert geographical coordinates to spatial features for marine region assignment.
+
+9. Using spatial data from marine region datasets (SeaVoX and Longhurst) to assign each sample to specific marine regions, filtering out land samples, and adding coastal/non-coastal information based on environmental classifications.
+
+10. Removing land samples by filtering out rows where marine region data indicates "land" or related terms in the region columns.
+
+11. Recalculating the latitude as distance from the equator for further analysis.
+
+12. Summarizing the number of unique biosamples per project after filtering and saving the final processed dataset to a file ("metagenomes.txt").
+
+
+
+
+
 First, we determine  the number of samples and runs that made it past metadata standardisation
 - count and display the unique entries for the biosample and run columns in each dataframe.
 
 Then, we combine the metadata dataframes of the different projects
 - It then identifies the common columns across all dataframes and renames any non-common columns to avoid conflicts during merging.
+- It also ensures that all datasets contain required environmental columns (e.g., "pressure_dbar", "salinity_pss"), and fills in missing columns with NA values.
 - After renaming, the dataframes are merged using a full outer join on the common columns.
 - The merged dataframe is reordered for easier analysis, and a subset containing only the common columns is saved separately.
 
 Then, we add more information based on values in the dataframes
 - The script then enriches the data by
-   - determining the season based on the collection date and the hemisphere (using latitude) and
-   - by categorizing locations as either "Coastal" or "Open Ocean" based on their proximity to coastlines.
+   - determining the season based on the collection date and the hemisphere (using latitude),
+   - adding 'layer' information (defaulting to "surface water" where missing),
+   - adding "distance from equator" based on latitude values, 
+   - using spatial data from marine region datasets (SeaVoX and Longhurst) to assign each sample to specific marine regions, and
+   - categorizing locations as either "Coastal" or "Open Ocean" based on their proximity to coastlines,
  
 Lastly, we will filter again based on the information just added (some samples are classified as land) and count the number of samples we are left with. This will be our starting list for downloading metagenomes!
  
