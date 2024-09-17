@@ -3,7 +3,7 @@
 This README.md details the entire process of acquiring, patching, standardising, and filtering the metadata associated with the following project accession numbers PRJNA385855 (Bermuda Atlantic Time-series Study, Hawaii Ocean Time-series), PRJNA385854 (bioGEOTRACES), PRJNA656268 (Bio-GO-SHIP), PRJNA352737 (Hawaii Ocean Time-series), PRJEB52452 (Malaspina), PRJEB8682 (Ocean Sampling Day), and Tara Oceans (PRJEB1787).
 
 
-## table of contents
+## Table of contents
 
 1. [`ENAmetadataKingfisherDownload.sh`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#1-enametadatakingfisherdownloadsh)
 2. [`cleanKingfisherTARA.py`](https://github.com/merenlab/public-marine-omics-metadata/tree/main/scripts#2-cleankingfishertarapy)
