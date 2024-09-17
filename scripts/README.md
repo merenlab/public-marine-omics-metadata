@@ -124,14 +124,13 @@ From here on, we are focusing on patching the metadata of the individual project
 Information we are aiming for:
 
 Essential
-- latitude and longitude (needed to see latitudinal gradient) - given either in lat_lon, latitude + longitude,
-   - need this as decimal, in separate fiels but also together
-- collection_date and time (what time of the year was it, can use to determine seasons)
+- latitude and longitude (needed to see latitudinal gradient) - given either in `lat_lon`, `latitude` + `longitude`,
+   - need this as decimal, in separate fields but also together
+- `collection_date` and time (what time of the year was it, can use to determine seasons)
 - size fractionation (essential to know what organisms to expect)
 
 Env metadata
 - temperature
-- salinity
 - as much as we can get really!
 
 environment 
@@ -146,7 +145,6 @@ procedual metadata
 
 Information I know won't be there, but I would like
 - coastal VS open ocean
-- upwelling system or non-upwelling system
 - consistent marine regions (e.g. which are all from the north atlantic? - can also be calculated later) - given as `geo_loc_name`
 - layer (did they target a deep chlorophyll maximum?)
 
